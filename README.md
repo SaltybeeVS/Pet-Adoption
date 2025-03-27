@@ -1,27 +1,73 @@
-# Pagina1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+# Pet Adoption Platform 🐾
 
-## Development server
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![Angular](https://img.shields.io/badge/Angular-16+-DD0031.svg?logo=angular)](https://angular.io/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A modern web platform connecting homeless pets with loving families. Designed for animal shelters and rescue organizations to streamline adoptions.
 
-## Code scaffolding
+![Screenshot](screenshot.png) *(Replace with actual screenshot)*
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features ✨
 
-## Build
+- **Pet Listings**: Browse adoptable dogs and cats
+- **Online Applications**: Digital adoption forms
+- **Shelter Profiles**: Team bios and contact info
+- **Responsive Design**: Mobile-friendly interface
+- **Admin Dashboard**: *(Future development)*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technologies 🛠️
 
-## Running unit tests
+- **Frontend**: Angular 16+, TypeScript
+- **UI**: Angular Material, CSS3
+- **Deployment**: GitHub Pages
+- **Tools**: RxJS, Reactive Forms
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation ⚙️
 
-## Running end-to-end tests
+```bash
+# Clone repository
+git clone https://github.com/your-username/pet-adoption-platform.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Install dependencies
+npm install
 
-## Further help
+# Run development server
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Configuration 🔧
+
+Set your Firebase config in `environment.ts`:
+```typescript
+export const environment = {
+  firebase: {
+    apiKey: "YOUR_KEY",
+    // ... other config
+  }
+};
+```
+
+## Deployment 🚀
+
+```bash
+# Build for production
+ng build --configuration production --base-href "https://your-username.github.io/repo-name/"
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## How to Contribute 🤝
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
