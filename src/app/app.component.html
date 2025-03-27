@@ -1,0 +1,57 @@
+<mat-toolbar color="primary" class="header-toolbar">
+ 
+  <div class="logo-container">
+    <img src="/logo.png" alt="Adote-me.com Logo" class="logo" routerLink="/">
+  </div>
+
+ 
+  <nav class="desktop-menu">
+    <button mat-button routerLink="/adocao" routerLinkActive="active">
+      <mat-icon>pets</mat-icon> Adoção
+    </button>
+    
+    <button mat-button routerLink="/informacao" routerLinkActive="active">
+      <mat-icon>info</mat-icon> Informações
+    </button>
+    
+    <button mat-button routerLink="/sobre" routerLinkActive="active">
+      <mat-icon>help</mat-icon> Sobre
+    </button>
+    
+    <button mat-button [matMenuTriggerFor]="cadastroMenu">
+      <mat-icon>person</mat-icon> Conta
+    </button>
+    <mat-menu #cadastroMenu="matMenu">
+      <button mat-menu-item routerLink="/login">
+        <mat-icon>login</mat-icon> Login
+      </button>
+      <button mat-menu-item routerLink="/cadastro">
+        <mat-icon>person_add</mat-icon> Cadastro
+      </button>
+    </mat-menu>
+  </nav>
+
+
+  <button mat-icon-button class="mobile-menu-button" [matMenuTriggerFor]="mobileMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #mobileMenu="matMenu">
+    <button mat-menu-item routerLink="/adocao">
+      <mat-icon>pets</mat-icon> Adoção
+    </button>
+    <button mat-menu-item routerLink="/informacao">
+      <mat-icon>info</mat-icon> Informações
+    </button>
+    <button mat-menu-item routerLink="/sobre">
+      <mat-icon>help</mat-icon> Sobre
+    </button>
+    <button mat-menu-item routerLink="/login">
+      <mat-icon>login</mat-icon> Login
+    </button>
+    <button mat-menu-item routerLink="/cadastro">
+      <mat-icon>person_add</mat-icon> Cadastro
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

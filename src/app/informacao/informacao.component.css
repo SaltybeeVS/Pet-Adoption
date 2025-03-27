@@ -1,0 +1,158 @@
+:host {
+    display: block;
+    background-color: var(--color-background);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .intro-text {
+    color: var(--color-text);
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+  
+  
+  .steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  
+  .step-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .step-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+  }
+  
+  .step-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .step-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+
+  .call-to-action {
+    background-color: rgba(188, 24, 35, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .call-to-action h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .call-to-action p {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-secondary);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-icon {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-text {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin: 0;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .steps-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .step-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .contact-item {
+      width: 100%;
+      max-width: 250px;
+      justify-content: center;
+    }
+  }
