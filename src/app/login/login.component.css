@@ -1,0 +1,125 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  padding: 2rem;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 2rem;
+}
+
+.login-icon {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.login-header h1 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.login-header p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: white !important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: transparent !important;
+}
+
+.mat-mdc-outlined-input:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mat-mdc-outlined-input:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mat-mdc-outlined-input:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color: var(--color-secondary) !important;
+}
+
+.mat-mdc-outlined-input:not(.mdc-text-field--disabled):hover .mdc-notched-outline .mdc-notched-outline__leading,
+.mat-mdc-outlined-input:not(.mdc-text-field--disabled):hover .mdc-notched-outline .mdc-notched-outline__notch,
+.mat-mdc-outlined-input:not(.mdc-text-field--disabled):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: var(--color-primary) !important;
+}
+
+.login-button {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: rgba(188, 24, 35, 0.9) !important;
+  transform: translateY(-2px);
+}
+
+.login-button:disabled {
+  background-color: var(--color-secondary) !important;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  margin-top: 2rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+.login-footer p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+  
+  :host {
+    padding: 1rem;
+  }
+}

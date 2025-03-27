@@ -1,0 +1,31 @@
+<div class="info-container">
+    <h1>Processo de Adoção</h1>
+    <p class="intro-text">
+      Adotar um animal é um ato de amor que transforma vidas. 
+      Veja como funciona nosso processo:
+    </p>
+  
+    <div class="steps-container">
+      <div class="step-card" *ngFor="let step of steps">
+        <mat-icon class="step-icon">{{ step.icon }}</mat-icon>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </div>
+    </div>
+  
+    <div class="call-to-action">
+      <h2>Pronto para mudar uma vida?</h2>
+      <p>Entre em contato conosco para agendar sua visita!</p>
+      
+      <div class="contact-container">
+        <div class="contact-item">
+          <mat-icon class="contact-icon">phone</mat-icon>
+          <span class="contact-text">{{ contactInfo.phone }}</span>
+        </div>
+        <div class="contact-item">
+          <mat-icon class="contact-icon">email</mat-icon>
+          <span class="contact-text">{{ contactInfo.email }}</span>
+        </div>
+      </div>
+    </div>
+  </div>

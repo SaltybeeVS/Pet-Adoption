@@ -1,0 +1,57 @@
+<div class="pets-container">
+  <h2>Adoção de Pets</h2>
+
+  @if (error) {
+    <div class="error-message">
+      {{ error }}
+      <button (click)="loadPets()">
+        <mat-icon>refresh</mat-icon> Recarregar
+      </button>
+    </div>
+  }
+
+  <div class="pets-grid">
+    @for (pet of pets; track pet.id) {
+      <div class="pet-card">
+        <div class="image-container">
+          <img 
+            [src]="pet.imageUrl" 
+            [alt]="pet.name"
+            (error)="pet.imageUrl = getPlaceholderImage(pet.type)"
+            class="pet-image"
+          >
+          <button class="favorite-button" (click)="favoritePet(pet)">
+            <mat-icon class="favorite-icon">favorite</mat-icon>
+          </button>
+        </div>
+        <div class="pet-info">
+          <h3>{{ pet.name }}</h3>
+          <p class="breed-name">{{ pet.originalName }}</p>
+          
+          <div class="pet-details">
+            <p><mat-icon>pets</mat-icon> {{ pet.type === 'cat' ? 'Gato' : 'Cachorro' }}</p>
+            <p><mat-icon>cake</mat-icon> {{ pet.age }}</p>
+            <p><mat-icon>location_on</mat-icon> {{ pet.location }}</p>
+          </div>
+        </div>
+        <button (click)="adoptPet(pet)" class="adopt-button">
+          <mat-icon class="paw-icon">pets</mat-icon> Adotar
+        </button>
+      </div>
+    }
+  </div>
+
+  @if (loading) {
+    <div class="spinner">
+      <mat-spinner diameter="50"></mat-spinner>
+      <p>Carregando mais pets...</p>
+    </div>
+  }
+
+  @if (!hasMorePets && pets.length > 0) {
+    <div class="no-more-pets">
+      <mat-icon>sentiment_very_satisfied</mat-icon>
+      <p>Você viu todos os pets disponíveis!</p>
+    </div>
+  }
+</div>

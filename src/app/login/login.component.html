@@ -1,0 +1,58 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <mat-icon class="login-icon">pets</mat-icon>
+      <h1>Bem-vindo de volta!</h1>
+      <p>Faça login para continuar</p>
+    </div>
+
+    <form class="login-form" (submit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Usuário</mat-label>
+        <input 
+          matInput 
+          placeholder="Digite seu usuário" 
+          [(ngModel)]="username" 
+          name="username"
+          required
+        >
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input 
+          matInput 
+          [type]="hide() ? 'password' : 'text'" 
+          placeholder="Digite sua senha"
+          [(ngModel)]="password" 
+          name="password"
+          required
+        >
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+          type="button"
+        >
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button 
+        mat-raised-button 
+        class="login-button" 
+        type="submit"
+        [disabled]="!username || !password"
+      >
+        Entrar
+      </button>
+    </form>
+
+    <div class="login-footer">
+      <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+      <p><a href="#">Esqueceu sua senha?</a></p>
+    </div>
+  </div>
+</div>

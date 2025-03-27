@@ -1,0 +1,68 @@
+<div class="about-container">
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Nossa Missão</h1>
+      <p class="hero-text">
+        Transformar vidas através do amor e cuidado com animais abandonados, 
+        promovendo adoções responsáveis e conscientização.
+      </p>
+      <button mat-raised-button class="cta-button">Quero Ajudar</button>
+    </div>
+  </section>
+
+  <section class="history-section">
+    <div class="section-content">
+      <h2>Nossa História</h2>
+      <div class="history-content">
+        <div class="history-text">
+          <p>
+            Fundado em 2015, o Adote.me começou como um pequeno projeto 
+            de Vicente Sandoval em seu quintal. Hoje, somos um dos maiores centros 
+            de resgate e adoção da região.
+          </p>
+          <p>
+            Nosso trabalho já transformou a vida de centenas de animais e famílias, 
+            criando laços de amor e cuidado que duram para sempre.
+          </p>
+        </div>
+        <div class="logo-container">
+          <img [src]="logoImage" alt="Logo Abrigo Mascote" class="logo-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="section-content">
+      <h2>Nossos Números</h2>
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of stats">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="section-content">
+      <h2>Conheça Nosso Time</h2>
+      <div class="team-grid">
+        <div class="team-card" *ngFor="let member of teamMembers">
+          <div class="team-photo" [style.backgroundImage]="'url(' + member.photo + ')'"></div>
+          <h3>{{ member.name }}</h3>
+          <p class="team-role">{{ member.role }}</p>
+          <p class="team-bio">{{ member.bio }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-content">
+      <h2>Quer Fazer Parte Dessa História?</h2>
+      <button mat-raised-button class="cta-button">Seja um Voluntário</button>
+      <button mat-button class="secondary-button">Faça uma Doação</button>
+    </div>
+  </section>
+</div>

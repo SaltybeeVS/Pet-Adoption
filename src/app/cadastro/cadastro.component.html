@@ -1,0 +1,88 @@
+<h1>CADASTRO PARA ADOÇÃO</h1>
+
+<form>
+  <h2 class="section-title">Dados Pessoais</h2>
+  
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput placeholder="Informe seu nome completo" required>
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+  </p>
+
+  <div class="form-row">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="seu@email.com" type="email" required>
+      <mat-icon matSuffix>mail</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input matInput placeholder="(00) 00000-0000" type="tel" required>
+      <mat-icon matSuffix>call</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <h2 class="section-title">Endereço</h2>
+  
+  <div class="address-grid">
+    <mat-form-field appearance="outline">
+      <mat-label>CEP</mat-label>
+      <input matInput placeholder="00000-000" (input)="formatarCEP($event)" maxlength="9" required>
+      <mat-icon matSuffix>pin_drop</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="street-field">
+      <mat-label>Logradouro</mat-label>
+      <input matInput placeholder="Rua/Avenida/Travessa" required>
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="small-field">
+      <mat-label>Número</mat-label>
+      <input matInput placeholder="Nº" type="number" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Complemento</mat-label>
+      <input matInput placeholder="Apto/Casa/Bloco">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Bairro</mat-label>
+      <input matInput placeholder="Informe seu bairro" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Cidade</mat-label>
+      <input matInput placeholder="Informe sua cidade" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Estado</mat-label>
+      <mat-select placeholder="UF" required>
+        <mat-option *ngFor="let state of estadosBrasileiros" [value]="state.sigla">
+          {{state.sigla}} - {{state.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <h2 class="section-title">Preferências de Adoção</h2>
+  
+  <div class="animal-type-container">
+    <label class="section-label">Tipo de animal que deseja adotar:</label>
+    <mat-radio-group required>
+      <mat-radio-button value="dog">Cachorro</mat-radio-button>
+      <mat-radio-button value="cat">Gato</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <mat-checkbox>Deseja receber informações sobre eventos de adoção</mat-checkbox>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="onSubmit()">ENVIAR CADASTRO</button>
+  </div>
+</form>

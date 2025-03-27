@@ -1,0 +1,250 @@
+:host {
+  display: block;
+}
+
+
+.about-container {
+  font-family: 'Arial', sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+
+.hero-section {
+  background-color: rgba(188, 24, 35, 0.1);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+}
+
+/* Sección Historia */
+.history-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.history-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.history-text {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.history-text p {
+  margin-bottom: 1.5rem;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.02);
+}
+
+
+.stats-section {
+  background-color: var(--color-background);
+  padding: 4rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+
+.team-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--color-primary);
+}
+
+.team-role {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.team-bio {
+  color: var(--color-text-secondary);
+}
+
+
+.cta-section {
+  background-color: var(--color-primary);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+
+.cta-button {
+  background-color: white !important;
+  color: var(--color-primary) !important;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-button {
+  color: white !important;
+  border: 1px solid white !important;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  margin: 0 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .history-content {
+    flex-direction: column;
+  }
+  
+  .logo-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .logo-image {
+    max-width: 300px;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-button, .secondary-button {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
