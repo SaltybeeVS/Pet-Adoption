@@ -1,9 +1,0 @@
-{
-  "routes": [
-    "/adocao",
-    "/cadastro",
-    "/informacao",
-    "/login",
-    "/sobre"
-  ]
-}
